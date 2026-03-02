@@ -1,0 +1,59 @@
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-4xl font-bold mb-8">Study Dashboard</h1>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="bg-white shadow rounded-lg p-6">
+      <h3 class="text-gray-500 text-sm font-semibold mb-2">Total Cards Studied</h3>
+      <p class="text-4xl font-bold text-blue-600"><%= @total_cards_studied %></p>
+    </div>
+    
+    <div class="bg-white shadow rounded-lg p-6">
+      <h3 class="text-gray-500 text-sm font-semibold mb-2">Correct Answers</h3>
+      <p class="text-4xl font-bold text-green-600"><%= @total_correct %></p>
+    </div>
+    
+    <div class="bg-white shadow rounded-lg p-6">
+      <h3 class="text-gray-500 text-sm font-semibold mb-2">Overall Accuracy</h3>
+      <p class="text-4xl font-bold text-purple-600"><%= @accuracy %>%</p>
+    </div>
+  </div>
+
+  <div class="bg-white shadow rounded-lg p-6 mb-8">
+    <h2 class="text-2xl font-semibold mb-4">Recent Study Sessions</h2>
+    <% if @study_sessions.any? %>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr class="border-b">
+              <th class="text-left py-2 px-4">Date</th>
+              <th class="text-left py-2 px-4">Cards Studied</th>
+              <th class="text-left py-2 px-4">Correct</th>
+              <th class="text-left py-2 px-4">Accuracy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @study_sessions.each do |session| %>
+              <tr class="border-b hover:bg-gray-50">
+                <td class="py-2 px-4"><%= session.study_date.strftime("%B %d, %Y") %></td>
+                <td class="py-2 px-4"><%= session.cards_studied %></td>
+                <td class="py-2 px-4"><%= session.correct_count %></td>
+                <td class="py-2 px-4">
+                  <% accuracy = session.cards_studied > 0 ? ((session.correct_count.to_f / session.cards_studied) * 100).round(1) : 0 %>
+                  <span class="<%= accuracy >= 70 ? 'text-green-600' : 'text-red-600' %> font-semibold">
+                    <%= accuracy %>%
+                  </span>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% else %>
+      <p class="text-gray-500">No study sessions yet. <%= link_to "Start studying!", root_path, class: "text-blue-500 hover:text-blue-700 underline" %></p>
+    <% end %>
+  </div>
+
+  <div class="text-center">
+    <%= link_to "← Back to Home", root_path, class: "text-blue-500 hover:text-blue-700 underline" %>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="flash-card bg-white shadow-lg rounded-lg p-8 max-w-xl mx-auto" data-controller="flashcard">
+  <div class="mb-4">
+    <span class="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"><%= @card.topic %></span>
+  </div>
+  
+  <div class="card-content min-h-48" data-flashcard-target="content">
+    <div class="question" data-flashcard-target="question">
+      <h2 class="text-2xl font-semibold mb-4">Question:</h2>
+      <p class="text-lg"><%= @card.question %></p>
+    </div>
+    
+    <div class="answer hidden" data-flashcard-target="answer">
+      <h2 class="text-2xl font-semibold mb-4 text-green-600">Answer:</h2>
+      <p class="text-lg"><%= @card.answer %></p>
+    </div>
+  </div>
+  
+  <div class="mt-8 flex justify-center">
+    <button 
+      data-action="click->flashcard#flip" 
+      data-flashcard-target="flipButton"
+      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded">
+      Show Answer
+    </button>
+  </div>
+  
+  <div class="answer-buttons hidden mt-8 flex justify-center gap-4" data-flashcard-target="answerButtons">
+    <%= button_to "I got it wrong", answer_study_session_path(@study_session, card_id: @card.id, is_correct: false), method: :post, class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-6 rounded" %>
+    <%= button_to "I got it right!", answer_study_session_path(@study_session, card_id: @card.id, is_correct: true), method: :post, class: "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-6 rounded" %>
+  </div>
+</div>
