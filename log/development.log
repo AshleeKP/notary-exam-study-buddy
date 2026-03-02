@@ -844,3 +844,37 @@ Processing by DashboardController#index as HTML
 Completed 200 OK in 20ms (Views: 11.6ms | ActiveRecord: 5.4ms | Allocations: 6678)
 
 
+Started GET "/dashboard" for ::1 at 2026-03-02 12:13:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DashboardController#index as HTML
+  [1m[36mStudySession Sum (0.8ms)[0m  [1m[34mSELECT SUM("study_sessions"."cards_studied") FROM "study_sessions"[0m
+  ↳ app/controllers/dashboard_controller.rb:4:in `index'
+  [1m[36mStudySession Sum (0.2ms)[0m  [1m[34mSELECT SUM("study_sessions"."correct_count") FROM "study_sessions"[0m
+  ↳ app/controllers/dashboard_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mStudySession Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "study_sessions" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/dashboard/index.html.erb:23
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" ORDER BY "study_sessions"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/views/dashboard/index.html.erb:35
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 22.5ms | Allocations: 6996)
+  Rendered layout layouts/application.html.erb (Duration: 144.7ms | Allocations: 44850)
+Completed 200 OK in 174ms (Views: 146.9ms | ActiveRecord: 6.3ms | Allocations: 52619)
+
+
+Started GET "/" for ::1 at 2026-03-02 12:32:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPamphletVersion Load (0.6ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 58.1ms | Allocations: 18523)
+  Rendered layout layouts/application.html.erb (Duration: 185.2ms | Allocations: 56145)
+Completed 200 OK in 208ms (Views: 183.1ms | ActiveRecord: 8.1ms | Allocations: 61733)
+
+

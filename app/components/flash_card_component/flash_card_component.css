@@ -1,0 +1,57 @@
+.flash-card {
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.flash-card:hover {
+  transform: translateY(-2px);
+}
+
+.flash-card .card-content {
+  min-height: 12rem;
+}
+
+.flash-card .question h2,
+.flash-card .answer h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.flash-card .answer h2 {
+  color: #16a34a;
+}
+
+.flash-card .question p,
+.flash-card .answer p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.flash-card button {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.flash-card button:hover {
+  opacity: 0.9;
+}
+
+.flash-card .answer-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}

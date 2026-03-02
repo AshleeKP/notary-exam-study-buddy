@@ -21,6 +21,7 @@ module Newapp
     
     # ViewComponent configuration
     config.view_component.preview_paths << Rails.root.join("spec/components/previews")
+    config.view_component.view_component_path = "app/components"
     
     # Generator configuration
     config.generators do |g|
