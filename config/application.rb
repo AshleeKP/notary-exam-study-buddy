@@ -18,5 +18,16 @@ module Newapp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
+    # ViewComponent configuration
+    config.view_component.preview_paths << Rails.root.join("spec/components/previews")
+    
+    # Generator configuration
+    config.generators do |g|
+      g.test_framework :rspec
+      g.view_specs false
+      g.helper_specs false
+      g.routing_specs false
+    end
   end
 end

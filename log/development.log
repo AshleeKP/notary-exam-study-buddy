@@ -43,3 +43,804 @@ FOREIGN KEY ("card_id")
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3954626451624462495)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2026-03-02 11:14:36 -0500
+  
+ActiveRecord::NoDatabaseError (We could not find your database: newapp_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.0.4) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (245.6ms)[0m  [1m[35mCREATE DATABASE "newapp_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE "newapp_test" ENCODING = 'unicode'[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3954626451624462495)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePamphletVersions (20260220202403)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "pamphlet_versions" ("id" bigserial primary key, "year" integer, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20260220202403"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCards (20260220202405)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "pamphlet_version_id" bigint NOT NULL, "question" text, "answer" text, "topic" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_a4743fb55f"
+FOREIGN KEY ("pamphlet_version_id")
+  REFERENCES "pamphlet_versions" ("id")
+)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_cards_on_pamphlet_version_id" ON "cards" ("pamphlet_version_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20260220202405"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStudySessions (20260220202406)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "study_sessions" ("id" bigserial primary key, "study_date" date, "cards_studied" integer, "correct_count" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20260220202406"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCardResults (20260220202408)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "card_results" ("id" bigserial primary key, "study_session_id" bigint NOT NULL, "card_id" bigint NOT NULL, "is_correct" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_a6b69696b9"
+FOREIGN KEY ("study_session_id")
+  REFERENCES "study_sessions" ("id")
+, CONSTRAINT "fk_rails_e523b384fb"
+FOREIGN KEY ("card_id")
+  REFERENCES "cards" ("id")
+)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_card_results_on_study_session_id" ON "card_results" ("study_session_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_card_results_on_card_id" ON "card_results" ("card_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20260220202408"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2026-03-02 16:15:01.041483"], ["updated_at", "2026-03-02 16:15:01.041483"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3954626451624462495)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2026-03-02 11:16:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/apitock/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/apitock/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 307)
+Completed 200 OK in 17ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 2796)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCardResult Load (2.2ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results"[0m
+  [1m[36mStudySession Load (1.1ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions"[0m
+  [1m[36mCard Load (1.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mPamphletVersion Load (1.1ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPamphletVersion Create (0.6ms)[0m  [1m[32mINSERT INTO "pamphlet_versions" ("year", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["year", 2024], ["description", "NY Notary Public License Law - 2024 Edition"], ["created_at", "2026-03-02 16:18:34.310813"], ["updated_at", "2026-03-02 16:18:34.310813"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.9ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is the term of office for a New York notary public?"], ["answer", "Four years"], ["topic", "Notary Basics"], ["created_at", "2026-03-02 16:18:34.349303"], ["updated_at", "2026-03-02 16:18:34.349303"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.7ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is the fee a notary may charge for administering an oath or affirmation?"], ["answer", "$2.00"], ["topic", "Notary Basics"], ["created_at", "2026-03-02 16:18:34.354535"], ["updated_at", "2026-03-02 16:18:34.354535"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What must a notary do before taking office?"], ["answer", "File an oath of office and official signature with the county clerk"], ["topic", "Notary Duties"], ["created_at", "2026-03-02 16:18:34.360066"], ["updated_at", "2026-03-02 16:18:34.360066"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can a notary notarize their own signature?"], ["answer", "No, a notary cannot notarize their own signature"], ["topic", "Notary Duties"], ["created_at", "2026-03-02 16:18:34.364566"], ["updated_at", "2026-03-02 16:18:34.364566"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.7ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What are the three main duties of a notary public?"], ["answer", "Administer oaths and affirmations, take affidavits and depositions, and receive and certify acknowledgments"], ["topic", "Notary Powers"], ["created_at", "2026-03-02 16:18:34.368870"], ["updated_at", "2026-03-02 16:18:34.368870"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is the minimum age to become a notary public in New York?"], ["answer", "18 years old"], ["topic", "Requirements"], ["created_at", "2026-03-02 16:18:34.387200"], ["updated_at", "2026-03-02 16:18:34.387200"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Must a notary public be a U.S. citizen?"], ["answer", "No, but they must be a resident of New York State or have an office/place of business in New York"], ["topic", "Requirements"], ["created_at", "2026-03-02 16:18:34.391197"], ["updated_at", "2026-03-02 16:18:34.391197"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is the maximum fee for taking an acknowledgment?"], ["answer", "$2.00"], ["topic", "Fees"], ["created_at", "2026-03-02 16:18:34.395411"], ["updated_at", "2026-03-02 16:18:34.395411"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What information must be included in a notarial certificate?"], ["answer", "The venue (state and county), the date, the notary's signature and printed name, and the notary's commission expiration date"], ["topic", "Certificates"], ["created_at", "2026-03-02 16:18:34.399663"], ["updated_at", "2026-03-02 16:18:34.399663"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is the penalty for a notary who commits misconduct?"], ["answer", "Possible removal from office, criminal prosecution, and civil liability"], ["topic", "Misconduct"], ["created_at", "2026-03-02 16:18:34.403689"], ["updated_at", "2026-03-02 16:18:34.403689"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Is a notary required to keep a journal in New York?"], ["answer", "No, but it is highly recommended as a best practice"], ["topic", "Journal"], ["created_at", "2026-03-02 16:18:34.407586"], ["updated_at", "2026-03-02 16:18:34.407586"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What types of identification are acceptable for notarization?"], ["answer", "A valid driver's license, passport, or other government-issued photo ID"], ["topic", "Identification"], ["created_at", "2026-03-02 16:18:34.411642"], ["updated_at", "2026-03-02 16:18:34.411642"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2026-03-02 11:20:54 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 420.1ms | Allocations: 89570)
+Completed 200 OK in 433ms (Views: 423.5ms | ActiveRecord: 0.0ms | Allocations: 92729)
+
+
+Started GET "/" for ::1 at 2026-03-02 11:22:45 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPamphletVersion Load (0.9ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Count (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 66.0ms | Allocations: 19362)
+  Rendered layout layouts/application.html.erb (Duration: 84.6ms | Allocations: 32164)
+Completed 200 OK in 95ms (Views: 75.7ms | ActiveRecord: 11.7ms | Allocations: 34435)
+
+
+Started GET "/" for ::1 at 2026-03-02 11:23:04 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPamphletVersion Load (0.3ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2807)
+  Rendered layout layouts/application.html.erb (Duration: 97.9ms | Allocations: 38231)
+Completed 200 OK in 99ms (Views: 97.4ms | ActiveRecord: 1.1ms | Allocations: 38572)
+
+
+Started POST "/study_sessions?pamphlet_version_id=1" for ::1 at 2026-03-02 11:23:06 -0500
+Processing by StudySessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pamphlet_version_id"=>"1"}
+  [1m[36mPamphletVersion Load (0.2ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions" WHERE "pamphlet_versions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mStudySession Create (1.7ms)[0m  [1m[32mINSERT INTO "study_sessions" ("study_date", "cards_studied", "correct_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_date", "2026-03-02"], ["cards_studied", 0], ["correct_count", 0], ["created_at", "2026-03-02 16:23:06.891192"], ["updated_at", "2026-03-02 16:23:06.891192"]]
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mCard Pluck (0.5ms)[0m  [1m[34mSELECT "cards"."id" FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:17:in `create'
+Redirected to http://localhost:3000/study_sessions/1
+Completed 302 Found in 27ms (ActiveRecord: 5.3ms | Allocations: 10606)
+
+
+Started GET "/study_sessions/1" for ::1 at 2026-03-02 11:23:06 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2468)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 5675)
+
+
+Started GET "/" for ::1 at 2026-03-02 11:29:35 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPamphletVersion Load (2.0ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Load (1.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 141.3ms | Allocations: 6367)
+  Rendered layout layouts/application.html.erb (Duration: 148.9ms | Allocations: 8857)
+Completed 200 OK in 160ms (Views: 157.3ms | ActiveRecord: 16.5ms | Allocations: 9755)
+
+
+Started POST "/study_sessions?pamphlet_version_id=1" for ::1 at 2026-03-02 11:29:37 -0500
+Processing by StudySessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pamphlet_version_id"=>"1"}
+  [1m[36mPamphletVersion Load (0.5ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions" WHERE "pamphlet_versions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mStudySession Create (1.1ms)[0m  [1m[32mINSERT INTO "study_sessions" ("study_date", "cards_studied", "correct_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_date", "2026-03-02"], ["cards_studied", 0], ["correct_count", 0], ["created_at", "2026-03-02 16:29:37.946193"], ["updated_at", "2026-03-02 16:29:37.946193"]]
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mCard Pluck (0.4ms)[0m  [1m[34mSELECT "cards"."id" FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:17:in `create'
+Redirected to http://localhost:3000/study_sessions/2
+Completed 302 Found in 16ms (ActiveRecord: 2.8ms | Allocations: 3457)
+
+
+Started GET "/study_sessions/2" for ::1 at 2026-03-02 11:29:37 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mStudySession Load (0.4ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2596)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2684)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms | Allocations: 4577)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x000000010dcdeca0>::FlashCardComponent
+
+@output_buffer.safe_append='      '.freeze;@output_buffer.append=( render FlashCardComponent.new(card: @current_card, study_session: @study_session) );@output_buffer.safe_append='
+                                                                          ^^^^^^^^^^^^^^^^^^):
+    13:     </div>
+    14: 
+    15:     <% if @current_card %>
+    16:       <%= render FlashCardComponent.new(card: @current_card, study_session: @study_session) %>
+    17:     <% else %>
+    18:       <div class="bg-white shadow-lg rounded-lg p-8 text-center">
+    19:         <h2 class="text-2xl font-bold mb-4">Study Session Complete! 🎉</h2>
+  
+app/views/study_sessions/show.html.erb:16
+Started GET "/" for ::1 at 2026-03-02 11:30:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPamphletVersion Load (0.7ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 76.8ms | Allocations: 18532)
+  Rendered layout layouts/application.html.erb (Duration: 500.1ms | Allocations: 115441)
+Completed 200 OK in 537ms (Views: 501.7ms | ActiveRecord: 8.2ms | Allocations: 121029)
+
+
+Started POST "/study_sessions?pamphlet_version_id=1" for ::1 at 2026-03-02 11:30:50 -0500
+Processing by StudySessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pamphlet_version_id"=>"1"}
+  [1m[36mPamphletVersion Load (0.2ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions" WHERE "pamphlet_versions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mStudySession Create (0.7ms)[0m  [1m[32mINSERT INTO "study_sessions" ("study_date", "cards_studied", "correct_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_date", "2026-03-02"], ["cards_studied", 0], ["correct_count", 0], ["created_at", "2026-03-02 16:30:51.000214"], ["updated_at", "2026-03-02 16:30:51.000214"]]
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mCard Pluck (0.2ms)[0m  [1m[34mSELECT "cards"."id" FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:17:in `create'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 26ms (ActiveRecord: 4.1ms | Allocations: 10595)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:30:51 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.4ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4455)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 0.7ms | Allocations: 7694)
+
+
+Started POST "/study_sessions/3/answer?card_id=3&is_correct=true" for ::1 at 2026-03-02 11:32:39 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"3", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.6ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (2.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 3], ["is_correct", true], ["created_at", "2026-03-02 16:32:39.160522"], ["updated_at", "2026-03-02 16:32:39.160522"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (5.8ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 1], ["correct_count", 1], ["updated_at", "2026-03-02 16:32:39.167485"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 52ms (ActiveRecord: 12.3ms | Allocations: 17156)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:32:39 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 894)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3184)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.5ms | Allocations: 4757)
+
+
+Started POST "/study_sessions/3/answer?card_id=12&is_correct=true" for ::1 at 2026-03-02 11:32:44 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"12", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 12], ["is_correct", true], ["created_at", "2026-03-02 16:32:44.675158"], ["updated_at", "2026-03-02 16:32:44.675158"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 2], ["correct_count", 2], ["updated_at", "2026-03-02 16:32:44.680116"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 17ms (ActiveRecord: 3.3ms | Allocations: 5380)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:32:44 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.4ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 815)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3006)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 0.8ms | Allocations: 4439)
+
+
+Started POST "/study_sessions/3/answer?card_id=1&is_correct=true" for ::1 at 2026-03-02 11:32:49 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"1", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.4ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.5ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 1], ["is_correct", true], ["created_at", "2026-03-02 16:32:49.706755"], ["updated_at", "2026-03-02 16:32:49.706755"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.3ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 3], ["correct_count", 3], ["updated_at", "2026-03-02 16:32:49.712480"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 15ms (ActiveRecord: 3.1ms | Allocations: 5372)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:32:49 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.1ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 819)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3020)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 4456)
+
+
+Started POST "/study_sessions/3/answer?card_id=5&is_correct=false" for ::1 at 2026-03-02 11:32:59 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"5", "is_correct"=>"false", "id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.6ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 5], ["is_correct", false], ["created_at", "2026-03-02 16:32:59.293723"], ["updated_at", "2026-03-02 16:32:59.293723"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "updated_at" = $2 WHERE "study_sessions"."id" = $3[0m  [["cards_studied", 4], ["updated_at", "2026-03-02 16:32:59.299140"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 19ms (ActiveRecord: 3.4ms | Allocations: 5347)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:32:59 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 815)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3022)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.4ms | Allocations: 4467)
+
+
+Started POST "/study_sessions/3/answer?card_id=2&is_correct=true" for ::1 at 2026-03-02 11:33:02 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"2", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 2], ["is_correct", true], ["created_at", "2026-03-02 16:33:02.244174"], ["updated_at", "2026-03-02 16:33:02.244174"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.6ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 5], ["correct_count", 4], ["updated_at", "2026-03-02 16:33:02.249426"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 17ms (ActiveRecord: 3.1ms | Allocations: 5380)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:33:02 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 818)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3010)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.7ms | Allocations: 4446)
+
+
+Started POST "/study_sessions/3/answer?card_id=7&is_correct=true" for ::1 at 2026-03-02 11:33:06 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"7", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.5ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 7], ["is_correct", true], ["created_at", "2026-03-02 16:33:06.416178"], ["updated_at", "2026-03-02 16:33:06.416178"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.3ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 6], ["correct_count", 5], ["updated_at", "2026-03-02 16:33:06.422789"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 20ms (ActiveRecord: 3.7ms | Allocations: 5337)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:33:06 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 815)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3019)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 4464)
+
+
+Started POST "/study_sessions/3/answer?card_id=6&is_correct=true" for ::1 at 2026-03-02 11:33:07 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"6", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 6], ["is_correct", true], ["created_at", "2026-03-02 16:33:07.961130"], ["updated_at", "2026-03-02 16:33:07.961130"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.5ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 7], ["correct_count", 6], ["updated_at", "2026-03-02 16:33:07.966587"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 18ms (ActiveRecord: 3.0ms | Allocations: 5349)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:33:07 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.4ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 815)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3006)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.6ms | Allocations: 4450)
+
+
+Started POST "/study_sessions/3/answer?card_id=8&is_correct=true" for ::1 at 2026-03-02 11:33:10 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"8", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.6ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 8], ["is_correct", true], ["created_at", "2026-03-02 16:33:10.240027"], ["updated_at", "2026-03-02 16:33:10.240027"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 8], ["correct_count", 7], ["updated_at", "2026-03-02 16:33:10.245812"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 16ms (ActiveRecord: 3.3ms | Allocations: 5355)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:33:10 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 816)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3007)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 0.7ms | Allocations: 4442)
+
+
+Started POST "/study_sessions/3/answer?card_id=9&is_correct=true" for ::1 at 2026-03-02 11:33:19 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"9", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 9], ["is_correct", true], ["created_at", "2026-03-02 16:33:19.264201"], ["updated_at", "2026-03-02 16:33:19.264201"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 9], ["correct_count", 8], ["updated_at", "2026-03-02 16:33:19.269424"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 17ms (ActiveRecord: 3.1ms | Allocations: 5385)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:33:19 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 816)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3010)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.6ms | Allocations: 4451)
+
+
+Started POST "/study_sessions/3/answer?card_id=11&is_correct=true" for ::1 at 2026-03-02 11:33:23 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"11", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 11], ["is_correct", true], ["created_at", "2026-03-02 16:33:23.340794"], ["updated_at", "2026-03-02 16:33:23.340794"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 10], ["correct_count", 9], ["updated_at", "2026-03-02 16:33:23.346523"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 16ms (ActiveRecord: 3.0ms | Allocations: 5370)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:33:23 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 816)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3013)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.5ms | Allocations: 4430)
+
+
+Started POST "/study_sessions/3/answer?card_id=4&is_correct=true" for ::1 at 2026-03-02 11:33:26 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"4", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 4], ["is_correct", true], ["created_at", "2026-03-02 16:33:26.501460"], ["updated_at", "2026-03-02 16:33:26.501460"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 11], ["correct_count", 10], ["updated_at", "2026-03-02 16:33:26.509595"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 18ms (ActiveRecord: 2.9ms | Allocations: 5362)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:33:26 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 818)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3025)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 4463)
+
+
+Started POST "/study_sessions/3/answer?card_id=10&is_correct=true" for ::1 at 2026-03-02 11:33:29 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"10", "is_correct"=>"true", "id"=>"3"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 3], ["card_id", 10], ["is_correct", true], ["created_at", "2026-03-02 16:33:29.653411"], ["updated_at", "2026-03-02 16:33:29.653411"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.3ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 12], ["correct_count", 11], ["updated_at", "2026-03-02 16:33:29.658971"], ["id", 3]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/3
+Completed 302 Found in 18ms (ActiveRecord: 3.4ms | Allocations: 5364)
+
+
+Started GET "/study_sessions/3" for ::1 at 2026-03-02 11:33:29 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2333)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 3278)
+
+
+Started GET "/dashboard" for ::1 at 2026-03-02 11:33:31 -0500
+Processing by DashboardController#index as HTML
+  [1m[36mStudySession Sum (2.1ms)[0m  [1m[34mSELECT SUM("study_sessions"."cards_studied") FROM "study_sessions"[0m
+  ↳ app/controllers/dashboard_controller.rb:4:in `index'
+  [1m[36mStudySession Sum (0.2ms)[0m  [1m[34mSELECT SUM("study_sessions"."correct_count") FROM "study_sessions"[0m
+  ↳ app/controllers/dashboard_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mStudySession Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "study_sessions" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/dashboard/index.html.erb:23
+  [1m[36mStudySession Load (2.8ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" ORDER BY "study_sessions"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/views/dashboard/index.html.erb:35
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2020)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4656)
+Completed 200 OK in 20ms (Views: 11.6ms | ActiveRecord: 5.4ms | Allocations: 6678)
+
+
