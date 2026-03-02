@@ -30,6 +30,10 @@ gem "jbuilder"
 # ViewComponent for building reusable view components
 gem "view_component"
 
+# PDF parsing
+gem "pdf-reader"
+gem "httparty"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
