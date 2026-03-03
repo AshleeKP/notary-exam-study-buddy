@@ -201,6 +201,91 @@ class NotaryPdfScraper
       topic: "Qualifications"
     }
     
+    # === VOCABULARY & DEFINITIONS ===
+    flashcards << {
+      question: "What is an acknowledgment?",
+      answer: "A notarial act by which the notary witnesses the signature of the signer and confirms their identity and willingness to sign a document",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is an affidavit?",
+      answer: "A written statement made under oath or affirmation before a notary public, declaring facts the affiant believes to be true",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is a jurat?",
+      answer: "A notarial certificate attached to an affidavit stating that the affiant swore or affirmed to it before the notary public",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is an attestation clause?",
+      answer: "A clause used to introduce witness signatures to a will or other document (not an acknowledgment)",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is a certificate of acknowledgment?",
+      answer: "A written statement by the notary confirming that the person whose signature is being acknowledged appeared before the notary and executed the document",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is a notarial seal?",
+      answer: "An embossed, stamped, or printed mark made by the notary to identify the notary public and authenticate notarial acts",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is a commission?",
+      answer: "Official authorization from the Secretary of State appointing a person as a notary public for a 4-year term",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is the principal in a notarial act?",
+      answer: "The person whose signature is being notarized or who is appearing before the notary (the party requesting notarization)",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is proof of execution?",
+      answer: "A notarial act certifying that the notary witnessed the signature and identity of the person whose signature is being proved",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is a certificate of official character?",
+      answer: "A document filed with county clerks certifying that a notary public is duly commissioned and authorized to perform notarial acts",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What does it mean to notarize?",
+      answer: "To authenticate or certify a document or signature through the performance of a notarial act by a commissioned notary public",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is a taker of an affidavit?",
+      answer: "The notary public who administers the oath or affirmation to the affiant",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is the difference between an oath and an affirmation?",
+      answer: "An oath invokes a divine being as witness to the truth; an affirmation is a solemn promise without religious reference, equally binding",
+      topic: "Vocabulary"
+    }
+    
+    flashcards << {
+      question: "What is execution of a document?",
+      answer: "The act of signing a document with the intent to be bound by its terms",
+      topic: "Vocabulary"
+    }
+    
     flashcards
   end
 end
