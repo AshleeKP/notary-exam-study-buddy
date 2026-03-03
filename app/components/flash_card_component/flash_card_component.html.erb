@@ -5,12 +5,12 @@
   
   <div class="card-content min-h-48" data-flashcard-target="content">
     <div class="question" data-flashcard-target="question">
-      <h2 class="text-2xl font-semibold mb-4">Question:</h2>
+      <p class="text-2xl font-semibold mb-4" role="heading" aria-level="2">Question:</p>
       <p class="text-lg"><%= @card.question %></p>
     </div>
     
     <div class="answer hidden" data-flashcard-target="answer">
-      <h2 class="text-2xl font-semibold mb-4 text-green-600">Answer:</h2>
+      <p class="text-2xl font-semibold mb-4 text-green-600" role="heading" aria-level="2">Answer:</p>
       <p class="text-lg"><%= @card.answer %></p>
     </div>
   </div>

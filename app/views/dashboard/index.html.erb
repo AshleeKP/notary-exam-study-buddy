@@ -1,34 +1,38 @@
 <div class="container mx-auto px-4 py-8">
   <h1 class="text-4xl font-bold mb-8">Study Dashboard</h1>
   
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-    <div class="bg-white shadow rounded-lg p-6">
-      <h3 class="text-gray-500 text-sm font-semibold mb-2">Total Cards Studied</h3>
-      <p class="text-4xl font-bold text-blue-600"><%= @total_cards_studied %></p>
+  <section aria-labelledby="stats-heading">
+    <h2 id="stats-heading" class="sr-only">Statistics Overview</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-white shadow rounded-lg p-6">
+        <h3 class="text-gray-500 text-sm font-semibold mb-2">Total Cards Studied</h3>
+        <p class="text-4xl font-bold text-blue-600"><%= @total_cards_studied %></p>
+      </div>
+      
+      <div class="bg-white shadow rounded-lg p-6">
+        <h3 class="text-gray-500 text-sm font-semibold mb-2">Correct Answers</h3>
+        <p class="text-4xl font-bold text-green-600"><%= @total_correct %></p>
+      </div>
+      
+      <div class="bg-white shadow rounded-lg p-6">
+        <h3 class="text-gray-500 text-sm font-semibold mb-2">Overall Accuracy</h3>
+        <p class="text-4xl font-bold text-purple-600"><%= @accuracy %>%</p>
+      </div>
     </div>
-    
-    <div class="bg-white shadow rounded-lg p-6">
-      <h3 class="text-gray-500 text-sm font-semibold mb-2">Correct Answers</h3>
-      <p class="text-4xl font-bold text-green-600"><%= @total_correct %></p>
-    </div>
-    
-    <div class="bg-white shadow rounded-lg p-6">
-      <h3 class="text-gray-500 text-sm font-semibold mb-2">Overall Accuracy</h3>
-      <p class="text-4xl font-bold text-purple-600"><%= @accuracy %>%</p>
-    </div>
-  </div>
+  </section>
 
-  <div class="bg-white shadow rounded-lg p-6 mb-8">
-    <h2 class="text-2xl font-semibold mb-4">Recent Study Sessions</h2>
+  <section aria-labelledby="sessions-heading">
+    <div class="bg-white shadow rounded-lg p-6 mb-8">
+      <h2 id="sessions-heading" class="text-2xl font-semibold mb-4">Recent Study Sessions</h2>
     <% if @study_sessions.any? %>
       <div class="overflow-x-auto">
-        <table class="min-w-full">
+        <table class="min-w-full" aria-label="Recent study sessions history">
           <thead>
             <tr class="border-b">
-              <th class="text-left py-2 px-4">Date</th>
-              <th class="text-left py-2 px-4">Cards Studied</th>
-              <th class="text-left py-2 px-4">Correct</th>
-              <th class="text-left py-2 px-4">Accuracy</th>
+              <th scope="col" class="text-left py-2 px-4">Date</th>
+              <th scope="col" class="text-left py-2 px-4">Cards Studied</th>
+              <th scope="col" class="text-left py-2 px-4">Correct</th>
+              <th scope="col" class="text-left py-2 px-4">Accuracy</th>
             </tr>
           </thead>
           <tbody>
@@ -51,7 +55,8 @@
     <% else %>
       <p class="text-gray-500">No study sessions yet. <%= link_to "Start studying!", root_path, class: "text-blue-500 hover:text-blue-700 underline" %></p>
     <% end %>
-  </div>
+    </div>
+  </section>
 
   <div class="text-center">
     <%= link_to "← Back to Home", root_path, class: "text-blue-500 hover:text-blue-700 underline" %>
