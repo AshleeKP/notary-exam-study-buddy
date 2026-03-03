@@ -1416,3 +1416,958 @@ Processing by DashboardController#index as HTML
 Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 1.2ms | Allocations: 5167)
 
 
+Downloading PDF from https://dos.ny.gov/system/files/documents/2024/05/notary.pdf...
+PDF downloaded successfully. Parsing...
+  [1m[36mPamphletVersion Load (1.1ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions" WHERE "pamphlet_versions"."year" = $1 LIMIT $2[0m  [["year", 2024], ["LIMIT", 1]]
+  ↳ lib/tasks/notary.rake:34:in `block (2 levels) in <main>'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.8ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 1]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.3ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 3]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.3ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 18]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 1]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.3ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 2]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 5]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 19]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 2]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 3]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 1]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.3ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 22]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 3]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 4]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 11]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 21]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 4]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 5]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 4]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 17]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 5]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.2ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 6]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 7]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 13]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 6]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 7]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 6]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 24]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 7]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 8]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 8]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 16]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 8]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 9]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 9]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 20]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 9]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.2ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 10]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 12]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 14]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 10]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.2ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 11]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 10]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 15]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 11]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 12]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 2]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.3ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 23]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 12]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is the term of a notary public commission in New York?"], ["answer", "4 years"], ["topic", "Commission and Appointment"], ["created_at", "2026-03-03 14:43:54.515559"], ["updated_at", "2026-03-03 14:43:54.515559"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "How much does a notary public application cost in New York?"], ["answer", "$60"], ["topic", "Fees and Costs"], ["created_at", "2026-03-03 14:43:54.519694"], ["updated_at", "2026-03-03 14:43:54.519694"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is required to be submitted with a notary application?"], ["answer", "A pass slip showing that s/he has taken and passed the notary public examination"], ["topic", "Application Requirements"], ["created_at", "2026-03-03 14:43:54.522907"], ["updated_at", "2026-03-03 14:43:54.522907"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can an attorney become a notary public without taking the examination?"], ["answer", "Yes, an individual admitted to practice in NYS as an attorney may be appointed a notary public without an examination"], ["topic", "Special Provisions"], ["created_at", "2026-03-03 14:43:54.526228"], ["updated_at", "2026-03-03 14:43:54.526228"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Where are notaries public commissioned?"], ["answer", "In their counties of residence"], ["topic", "Jurisdiction"], ["created_at", "2026-03-03 14:43:54.529106"], ["updated_at", "2026-03-03 14:43:54.529106"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Which official maintains a record of the notary's commission and signature?"], ["answer", "The county clerk"], ["topic", "Record Keeping"], ["created_at", "2026-03-03 14:43:54.532021"], ["updated_at", "2026-03-03 14:43:54.532021"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can notaries take acknowledgments and affidavits over the telephone?"], ["answer", "No, it is illegal. The individual making the acknowledgment or affidavit must appear in person before the notary"], ["topic", "Professional Conduct"], ["created_at", "2026-03-03 14:43:54.534865"], ["updated_at", "2026-03-03 14:43:54.534865"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is the simplest legally acceptable form of an oath?"], ["answer", "'Do you solemnly swear that the contents of this affidavit subscribed by you is correct and true?'"], ["topic", "Oaths and Affirmations"], ["created_at", "2026-03-03 14:43:54.537586"], ["updated_at", "2026-03-03 14:43:54.537586"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What can a person who conscientiously declines taking an oath use instead?"], ["answer", "An affirmation, such as 'Do you solemnly, sincerely and truly declare and affirm that the statements made by you are true and correct?'"], ["topic", "Oaths and Affirmations"], ["created_at", "2026-03-03 14:43:54.540956"], ["updated_at", "2026-03-03 14:43:54.540956"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What does the seal or stamp of a notary public authenticate?"], ["answer", "The official signature of the notary public"], ["topic", "Notarial Seal and Signature"], ["created_at", "2026-03-03 14:43:54.543928"], ["updated_at", "2026-03-03 14:43:54.543928"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Who is NOT eligible to become a notary public in New York?"], ["answer", "Any person who has been convicted of a felony or crime involving dishonesty"], ["topic", "Disqualifications"], ["created_at", "2026-03-03 14:43:54.546696"], ["updated_at", "2026-03-03 14:43:54.546696"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What must a notary do before executing any document?"], ["answer", "Require the presence of the party whose acknowledgment is being taken, or prove their identity satisfactorily"], ["topic", "Professional Conduct"], ["created_at", "2026-03-03 14:43:54.550891"], ["updated_at", "2026-03-03 14:43:54.550891"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mPamphletVersion Load (0.6ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  [1m[36mCard Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" LIMIT $1[0m  [["LIMIT", 3]]
+Started GET "/" for ::1 at 2026-03-03 09:44:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPamphletVersion Load (2.4ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 222.0ms | Allocations: 18396)
+  Rendered layout layouts/application.html.erb (Duration: 376.1ms | Allocations: 56526)
+Completed 200 OK in 454ms (Views: 375.5ms | ActiveRecord: 17.1ms | Allocations: 62113)
+
+
+Started POST "/study_sessions?pamphlet_version_id=1" for ::1 at 2026-03-03 09:44:44 -0500
+Processing by StudySessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pamphlet_version_id"=>"1"}
+  [1m[36mPamphletVersion Load (0.6ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions" WHERE "pamphlet_versions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mStudySession Create (1.2ms)[0m  [1m[32mINSERT INTO "study_sessions" ("study_date", "cards_studied", "correct_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_date", "2026-03-03"], ["cards_studied", 0], ["correct_count", 0], ["created_at", "2026-03-03 14:44:44.806359"], ["updated_at", "2026-03-03 14:44:44.806359"]]
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:10:in `create'
+  [1m[36mCard Pluck (0.4ms)[0m  [1m[34mSELECT "cards"."id" FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:17:in `create'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 51ms (ActiveRecord: 7.9ms | Allocations: 10611)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:44:44 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.9ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (1.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 23.8ms | Allocations: 2017)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 4549)
+Completed 200 OK in 54ms (Views: 37.0ms | ActiveRecord: 2.5ms | Allocations: 7782)
+
+
+Started POST "/study_sessions/5/answer?card_id=23&is_correct=true" for ::1 at 2026-03-03 09:44:52 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"23", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (1.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 23], ["is_correct", true], ["created_at", "2026-03-03 14:44:52.998933"], ["updated_at", "2026-03-03 14:44:52.998933"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.3ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 1], ["correct_count", 1], ["updated_at", "2026-03-03 14:44:53.006141"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 32ms (ActiveRecord: 6.9ms | Allocations: 11995)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:44:53 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 894)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3325)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 4892)
+
+
+Started POST "/study_sessions/5/answer?card_id=16&is_correct=true" for ::1 at 2026-03-03 09:45:00 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"16", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.5ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 16], ["is_correct", true], ["created_at", "2026-03-03 14:45:00.027749"], ["updated_at", "2026-03-03 14:45:00.027749"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 2], ["correct_count", 2], ["updated_at", "2026-03-03 14:45:00.039119"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 33ms (ActiveRecord: 3.5ms | Allocations: 5369)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:45:00 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 819)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 3152)
+Completed 200 OK in 41ms (Views: 30.9ms | ActiveRecord: 0.5ms | Allocations: 4594)
+
+
+Started POST "/study_sessions/5/answer?card_id=20&is_correct=true" for ::1 at 2026-03-03 09:45:17 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"20", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.9ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 20], ["is_correct", true], ["created_at", "2026-03-03 14:45:17.852206"], ["updated_at", "2026-03-03 14:45:17.852206"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 3], ["correct_count", 3], ["updated_at", "2026-03-03 14:45:17.858967"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 20ms (ActiveRecord: 3.8ms | Allocations: 5371)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:45:17 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 818)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3168)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 4634)
+
+
+Started POST "/study_sessions/5/answer?card_id=19&is_correct=true" for ::1 at 2026-03-03 09:45:24 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"19", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.5ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 19], ["is_correct", true], ["created_at", "2026-03-03 14:45:24.575394"], ["updated_at", "2026-03-03 14:45:24.575394"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.3ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 4], ["correct_count", 4], ["updated_at", "2026-03-03 14:45:24.581460"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 18ms (ActiveRecord: 3.1ms | Allocations: 5383)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:45:24 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 816)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3148)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 4583)
+
+
+Started POST "/study_sessions/5/answer?card_id=24&is_correct=false" for ::1 at 2026-03-03 09:45:37 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"24", "is_correct"=>"false", "id"=>"5"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.6ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 24], ["is_correct", false], ["created_at", "2026-03-03 14:45:37.569908"], ["updated_at", "2026-03-03 14:45:37.569908"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.3ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "updated_at" = $2 WHERE "study_sessions"."id" = $3[0m  [["cards_studied", 5], ["updated_at", "2026-03-03 14:45:37.576123"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 17ms (ActiveRecord: 3.1ms | Allocations: 5353)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:45:37 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.4ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 816)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3148)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.5ms | Allocations: 4582)
+
+
+Started POST "/study_sessions/5/answer?card_id=21&is_correct=true" for ::1 at 2026-03-03 09:45:52 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"21", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.5ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 21], ["is_correct", true], ["created_at", "2026-03-03 14:45:52.062119"], ["updated_at", "2026-03-03 14:45:52.062119"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.5ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 6], ["correct_count", 5], ["updated_at", "2026-03-03 14:45:52.068849"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 18ms (ActiveRecord: 3.2ms | Allocations: 5337)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:45:52 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 816)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3148)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 4605)
+
+
+Started POST "/study_sessions/5/answer?card_id=13&is_correct=true" for ::1 at 2026-03-03 09:45:57 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"13", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.5ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 13], ["is_correct", true], ["created_at", "2026-03-03 14:45:57.997658"], ["updated_at", "2026-03-03 14:45:57.997658"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 7], ["correct_count", 6], ["updated_at", "2026-03-03 14:45:58.002986"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 16ms (ActiveRecord: 2.7ms | Allocations: 5367)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:45:58 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 817)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3149)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 4570)
+
+
+Started POST "/study_sessions/5/answer?card_id=15&is_correct=true" for ::1 at 2026-03-03 09:46:06 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"15", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.7ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 15], ["is_correct", true], ["created_at", "2026-03-03 14:46:06.767368"], ["updated_at", "2026-03-03 14:46:06.767368"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.3ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 8], ["correct_count", 7], ["updated_at", "2026-03-03 14:46:06.774031"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 18ms (ActiveRecord: 3.1ms | Allocations: 5358)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:46:06 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 815)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3156)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.5ms | Allocations: 4600)
+
+
+Started POST "/study_sessions/5/answer?card_id=14&is_correct=true" for ::1 at 2026-03-03 09:46:10 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"14", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.3ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 14], ["is_correct", true], ["created_at", "2026-03-03 14:46:10.442109"], ["updated_at", "2026-03-03 14:46:10.442109"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.3ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 9], ["correct_count", 8], ["updated_at", "2026-03-03 14:46:10.447873"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 17ms (ActiveRecord: 2.9ms | Allocations: 5346)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:46:10 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 819)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3171)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 4589)
+
+
+Started POST "/study_sessions/5/answer?card_id=22&is_correct=true" for ::1 at 2026-03-03 09:46:16 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"22", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.4ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 22], ["is_correct", true], ["created_at", "2026-03-03 14:46:16.698460"], ["updated_at", "2026-03-03 14:46:16.698460"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.4ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 10], ["correct_count", 9], ["updated_at", "2026-03-03 14:46:16.704142"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 16ms (ActiveRecord: 2.8ms | Allocations: 5367)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:46:16 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 816)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3165)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 4597)
+
+
+Started POST "/study_sessions/5/answer?card_id=17&is_correct=true" for ::1 at 2026-03-03 09:46:22 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"17", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.4ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.6ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 17], ["is_correct", true], ["created_at", "2026-03-03 14:46:22.186746"], ["updated_at", "2026-03-03 14:46:22.186746"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.6ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 11], ["correct_count", 10], ["updated_at", "2026-03-03 14:46:22.195940"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 28ms (ActiveRecord: 5.6ms | Allocations: 5370)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:46:22 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.5ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:54:in `next_card'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 815)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3147)
+Completed 200 OK in 18ms (Views: 11.0ms | ActiveRecord: 0.7ms | Allocations: 4597)
+
+
+Started POST "/study_sessions/5/answer?card_id=18&is_correct=true" for ::1 at 2026-03-03 09:46:27 -0500
+Processing by StudySessionsController#answer as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "card_id"=>"18", "is_correct"=>"true", "id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:24:in `answer'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:25:in `answer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mCardResult Create (0.5ms)[0m  [1m[32mINSERT INTO "card_results" ("study_session_id", "card_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["study_session_id", 5], ["card_id", 18], ["is_correct", true], ["created_at", "2026-03-03 14:46:27.361744"], ["updated_at", "2026-03-03 14:46:27.361744"]]
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:29:in `answer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mStudySession Update (0.3ms)[0m  [1m[33mUPDATE "study_sessions" SET "cards_studied" = $1, "correct_count" = $2, "updated_at" = $3 WHERE "study_sessions"."id" = $4[0m  [["cards_studied", 12], ["correct_count", 11], ["updated_at", "2026-03-03 14:46:27.367835"], ["id", 5]]
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/study_sessions_controller.rb:35:in `answer'
+Redirected to http://localhost:3000/study_sessions/5
+Completed 302 Found in 16ms (ActiveRecord: 2.9ms | Allocations: 5355)
+
+
+Started GET "/study_sessions/5" for ::1 at 2026-03-03 09:46:27 -0500
+Processing by StudySessionsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mStudySession Load (0.2ms)[0m  [1m[34mSELECT "study_sessions".* FROM "study_sessions" WHERE "study_sessions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/study_sessions_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering study_sessions/show.html.erb within layouts/application
+  Rendered study_sessions/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2474)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 3430)
+
+
+Started GET "/" for ::1 at 2026-03-03 09:46:38 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPamphletVersion Load (0.3ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mCard Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2733)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 5073)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 1.2ms | Allocations: 5369)
+
+
+  [1m[36mPamphletVersion Load (0.4ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions" WHERE "pamphlet_versions"."year" = $1 LIMIT $2[0m  [["year", 2024], ["LIMIT", 1]]
+  ↳ lib/tasks/notary.rake:34:in `block (2 levels) in <main>'
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.5ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 13]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.3ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 31]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.7ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 13]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 14]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 33]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 14]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.4ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 15]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 32]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 15]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 16]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 26]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 16]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.2ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 17]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 35]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 17]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 18]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 36]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 18]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 19]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 28]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 19]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 20]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 27]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 20]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 21]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.1ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 30]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 21]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.2ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 22]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.2ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 34]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 22]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 23]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.3ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 25]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 23]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Load (0.1ms)[0m  [1m[34mSELECT "card_results".* FROM "card_results" WHERE "card_results"."card_id" = $1[0m  [["card_id", 24]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCardResult Destroy (0.3ms)[0m  [1m[31mDELETE FROM "card_results" WHERE "card_results"."id" = $1[0m  [["id", 29]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mCard Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 24]]
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:37:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is the term of a notary public commission in New York?"], ["answer", "4 years"], ["topic", "Commission and Appointment"], ["created_at", "2026-03-03 15:14:34.387549"], ["updated_at", "2026-03-03 15:14:34.387549"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "How much does a notary public application cost in New York?"], ["answer", "$60"], ["topic", "Fees and Costs"], ["created_at", "2026-03-03 15:14:34.393368"], ["updated_at", "2026-03-03 15:14:34.393368"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is required to be submitted with a notary application?"], ["answer", "A pass slip showing that s/he has taken and passed the notary public examination"], ["topic", "Application Requirements"], ["created_at", "2026-03-03 15:14:34.396303"], ["updated_at", "2026-03-03 15:14:34.396303"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can an attorney become a notary public without taking the examination?"], ["answer", "Yes, an individual admitted to practice in NYS as an attorney may be appointed a notary public without an examination"], ["topic", "Special Provisions"], ["created_at", "2026-03-03 15:14:34.399514"], ["updated_at", "2026-03-03 15:14:34.399514"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Where are notaries public commissioned?"], ["answer", "In their counties of residence"], ["topic", "Jurisdiction"], ["created_at", "2026-03-03 15:14:34.402310"], ["updated_at", "2026-03-03 15:14:34.402310"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Which official maintains a record of the notary's commission and signature?"], ["answer", "The county clerk"], ["topic", "Record Keeping"], ["created_at", "2026-03-03 15:14:34.405148"], ["updated_at", "2026-03-03 15:14:34.405148"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can notaries take acknowledgments and affidavits over the telephone?"], ["answer", "No, it is illegal. The individual making the acknowledgment or affidavit must appear in person before the notary"], ["topic", "Professional Conduct"], ["created_at", "2026-03-03 15:14:34.407932"], ["updated_at", "2026-03-03 15:14:34.407932"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is the simplest legally acceptable form of an oath?"], ["answer", "'Do you solemnly swear that the contents of this affidavit subscribed by you is correct and true?'"], ["topic", "Oaths and Affirmations"], ["created_at", "2026-03-03 15:14:34.411072"], ["updated_at", "2026-03-03 15:14:34.411072"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What can a person who conscientiously declines taking an oath use instead?"], ["answer", "An affirmation, such as 'Do you solemnly, sincerely and truly declare and affirm that the statements made by you are true and correct?'"], ["topic", "Oaths and Affirmations"], ["created_at", "2026-03-03 15:14:34.413776"], ["updated_at", "2026-03-03 15:14:34.413776"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What does the seal or stamp of a notary public authenticate?"], ["answer", "The official signature of the notary public"], ["topic", "Notarial Seal and Signature"], ["created_at", "2026-03-03 15:14:34.416580"], ["updated_at", "2026-03-03 15:14:34.416580"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Who is NOT eligible to become a notary public in New York?"], ["answer", "Any person who has been convicted of a felony or crime involving dishonesty"], ["topic", "Disqualifications"], ["created_at", "2026-03-03 15:14:34.419520"], ["updated_at", "2026-03-03 15:14:34.419520"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What must a notary do before executing any document?"], ["answer", "Require the presence of the party whose acknowledgment is being taken, or prove their identity satisfactorily"], ["topic", "Professional Conduct"], ["created_at", "2026-03-03 15:14:34.423257"], ["updated_at", "2026-03-03 15:14:34.423257"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can a notary give legal advice?"], ["answer", "No, unless the notary is an attorney licensed to practice law. A notary public may not give legal advice about any matter"], ["topic", "Prohibited Conduct"], ["created_at", "2026-03-03 15:14:34.427459"], ["updated_at", "2026-03-03 15:14:34.427459"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can a notary ask for or receive legal business from clients?"], ["answer", "No, a notary public may not ask for and get legal business to send to a lawyer"], ["topic", "Prohibited Conduct"], ["created_at", "2026-03-03 15:14:34.430526"], ["updated_at", "2026-03-03 15:14:34.430526"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can a notary divide or share fees with a lawyer?"], ["answer", "No, a notary public may not divide or agree to divide fees with a lawyer, or accept any compensation from a lawyer"], ["topic", "Prohibited Conduct"], ["created_at", "2026-03-03 15:14:34.433362"], ["updated_at", "2026-03-03 15:14:34.433362"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (1.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can a notary advertise themselves as providing legal services?"], ["answer", "No (unless they are an attorney), a notary public may not advertise in any manner any legal services or papers"], ["topic", "Prohibited Conduct"], ["created_at", "2026-03-03 15:14:34.436069"], ["updated_at", "2026-03-03 15:14:34.436069"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Unless they are a lawyer, what practice of law is prohibited to notaries?"], ["answer", "Notaries (unless lawyers) may not engage directly or indirectly in the practice of law"], ["topic", "Prohibited Conduct"], ["created_at", "2026-03-03 15:14:34.440528"], ["updated_at", "2026-03-03 15:14:34.440528"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can a notary use an acknowledgment of a will as an attestation clause?"], ["answer", "No, such acknowledgment cannot be deemed equivalent to an attestation clause accompanying a will"], ["topic", "Acknowledgments and Attestations"], ["created_at", "2026-03-03 15:14:34.444474"], ["updated_at", "2026-03-03 15:14:34.444474"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What principle governs the importance of proper notarial acknowledgments?"], ["answer", "Upon the faith of these acknowledgments rests the title of real property. The only security is the fidelity of notaries in requiring parties' presence"], ["topic", "Acknowledgments and Attestations"], ["created_at", "2026-03-03 15:14:34.447876"], ["updated_at", "2026-03-03 15:14:34.447876"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What are the main powers of a notary public?"], ["answer", "To take acknowledgments and proofs of deeds, mortgages, powers of attorney and other instruments in writing; to demand acceptance or payment of foreign and inland bills"], ["topic", "Powers and Duties"], ["created_at", "2026-03-03 15:14:34.451615"], ["updated_at", "2026-03-03 15:14:34.451615"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can a notary use foreign language terms in a notarial act?"], ["answer", "No, a notary public shall not use terms in a foreign language in any notarial act"], ["topic", "Professional Conduct"], ["created_at", "2026-03-03 15:14:34.454478"], ["updated_at", "2026-03-03 15:14:34.454478"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What can a notary public with residence in NY but working in another county do?"], ["answer", "They may elect to file a certificate of official character with other New York State county clerks"], ["topic", "Jurisdiction"], ["created_at", "2026-03-03 15:14:34.468714"], ["updated_at", "2026-03-03 15:14:34.468714"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "Can non-residents become notaries public in New York?"], ["answer", "Yes, nonresidents who have offices or places of business in New York State may become notaries. The oath must be filed in the county where the office is located"], ["topic", "Jurisdiction"], ["created_at", "2026-03-03 15:14:34.472385"], ["updated_at", "2026-03-03 15:14:34.472385"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What happens if a notary moves out of state but maintains an office in NY?"], ["answer", "They do not vacate their office as a notary public if they still maintain a place of business or office in New York State"], ["topic", "Special Provisions"], ["created_at", "2026-03-03 15:14:34.475210"], ["updated_at", "2026-03-03 15:14:34.475210"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.6ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What is required from a nonresident notary who ceases to maintain a NY office?"], ["answer", "They vacate their office as a notary public and surrender their commission"], ["topic", "Special Provisions"], ["created_at", "2026-03-03 15:14:34.478369"], ["updated_at", "2026-03-03 15:14:34.478369"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("pamphlet_version_id", "question", "answer", "topic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["pamphlet_version_id", 1], ["question", "What education requirement must a notary public applicant meet?"], ["answer", "The applicant must have the equivalent of a common school education"], ["topic", "Qualifications"], ["created_at", "2026-03-03 15:14:34.483239"], ["updated_at", "2026-03-03 15:14:34.483239"]]
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/notary.rake:41:in `block (3 levels) in <main>'
+  [1m[36mCard Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards"[0m
+  [1m[36mCard Count (0.8ms)[0m  [1m[34mSELECT COUNT("cards"."topic") AS "count_topic", "cards"."topic" AS "cards_topic" FROM "cards" GROUP BY "cards"."topic"[0m
+Started GET "/" for ::1 at 2026-03-03 10:18:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPamphletVersion Load (0.5ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mCard Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 56.7ms | Allocations: 18760)
+  Rendered layout layouts/application.html.erb (Duration: 169.0ms | Allocations: 56866)
+Completed 200 OK in 199ms (Views: 165.7ms | ActiveRecord: 9.4ms | Allocations: 62453)
+
+
+Started GET "/" for ::1 at 2026-03-03 11:18:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPamphletVersion Load (0.5ms)[0m  [1m[34mSELECT "pamphlet_versions".* FROM "pamphlet_versions"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mCard Load (1.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mCard Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "cards" WHERE "cards"."pamphlet_version_id" = $1[0m  [["pamphlet_version_id", 1]]
+  ↳ app/views/home/index.html.erb:15
+  Rendered home/index.html.erb within layouts/application (Duration: 121.2ms | Allocations: 18749)
+  Rendered layout layouts/application.html.erb (Duration: 303.9ms | Allocations: 66289)
+Completed 200 OK in 343ms (Views: 299.6ms | ActiveRecord: 12.2ms | Allocations: 71875)
+
+
