@@ -38,6 +38,7 @@ class NotaryPdfScraper
     # Manually curated flashcards from the NY Notary PDF
     # These are key concepts from the License Law document
     
+    # === APPOINTMENT & COMMISSION ===
     flashcards << {
       question: "What is the term of a notary public commission in New York?",
       answer: "4 years",
@@ -74,6 +75,7 @@ class NotaryPdfScraper
       topic: "Record Keeping"
     }
     
+    # === PROFESSIONAL CONDUCT & PROHIBITED ACTIONS ===
     flashcards << {
       question: "Can notaries take acknowledgments and affidavits over the telephone?",
       answer: "No, it is illegal. The individual making the acknowledgment or affidavit must appear in person before the notary",
@@ -108,6 +110,95 @@ class NotaryPdfScraper
       question: "What must a notary do before executing any document?",
       answer: "Require the presence of the party whose acknowledgment is being taken, or prove their identity satisfactorily",
       topic: "Professional Conduct"
+    }
+    
+    # === PROHIBITED CONDUCT ===
+    flashcards << {
+      question: "Can a notary give legal advice?",
+      answer: "No, unless the notary is an attorney licensed to practice law. A notary public may not give legal advice about any matter",
+      topic: "Prohibited Conduct"
+    }
+    
+    flashcards << {
+      question: "Can a notary ask for or receive legal business from clients?",
+      answer: "No, a notary public may not ask for and get legal business to send to a lawyer",
+      topic: "Prohibited Conduct"
+    }
+    
+    flashcards << {
+      question: "Can a notary divide or share fees with a lawyer?",
+      answer: "No, a notary public may not divide or agree to divide fees with a lawyer, or accept any compensation from a lawyer",
+      topic: "Prohibited Conduct"
+    }
+    
+    flashcards << {
+      question: "Can a notary advertise themselves as providing legal services?",
+      answer: "No (unless they are an attorney), a notary public may not advertise in any manner any legal services or papers",
+      topic: "Prohibited Conduct"
+    }
+    
+    flashcards << {
+      question: "Unless they are a lawyer, what practice of law is prohibited to notaries?",
+      answer: "Notaries (unless lawyers) may not engage directly or indirectly in the practice of law",
+      topic: "Prohibited Conduct"
+    }
+    
+    # === ACKNOWLEDGMENTS ===
+    flashcards << {
+      question: "Can a notary use an acknowledgment of a will as an attestation clause?",
+      answer: "No, such acknowledgment cannot be deemed equivalent to an attestation clause accompanying a will",
+      topic: "Acknowledgments and Attestations"
+    }
+    
+    flashcards << {
+      question: "What principle governs the importance of proper notarial acknowledgments?",
+      answer: "Upon the faith of these acknowledgments rests the title of real property. The only security is the fidelity of notaries in requiring parties' presence",
+      topic: "Acknowledgments and Attestations"
+    }
+    
+    # === POWERS AND DUTIES ===
+    flashcards << {
+      question: "What are the main powers of a notary public?",
+      answer: "To take acknowledgments and proofs of deeds, mortgages, powers of attorney and other instruments in writing; to demand acceptance or payment of foreign and inland bills",
+      topic: "Powers and Duties"
+    }
+    
+    flashcards << {
+      question: "Can a notary use foreign language terms in a notarial act?",
+      answer: "No, a notary public shall not use terms in a foreign language in any notarial act",
+      topic: "Professional Conduct"
+    }
+    
+    # === JURISDICTIONAL RULES ===
+    flashcards << {
+      question: "What can a notary public with residence in NY but working in another county do?",
+      answer: "They may elect to file a certificate of official character with other New York State county clerks",
+      topic: "Jurisdiction"
+    }
+    
+    flashcards << {
+      question: "Can non-residents become notaries public in New York?",
+      answer: "Yes, nonresidents who have offices or places of business in New York State may become notaries. The oath must be filed in the county where the office is located",
+      topic: "Jurisdiction"
+    }
+    
+    # === SPECIAL PROVISIONS ===
+    flashcards << {
+      question: "What happens if a notary moves out of state but maintains an office in NY?",
+      answer: "They do not vacate their office as a notary public if they still maintain a place of business or office in New York State",
+      topic: "Special Provisions"
+    }
+    
+    flashcards << {
+      question: "What is required from a nonresident notary who ceases to maintain a NY office?",
+      answer: "They vacate their office as a notary public and surrender their commission",
+      topic: "Special Provisions"
+    }
+    
+    flashcards << {
+      question: "What education requirement must a notary public applicant meet?",
+      answer: "The applicant must have the equivalent of a common school education",
+      topic: "Qualifications"
     }
     
     flashcards
