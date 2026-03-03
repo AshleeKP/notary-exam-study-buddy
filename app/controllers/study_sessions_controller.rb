@@ -59,7 +59,7 @@ class StudySessionsController < ApplicationController
     current_index = session[:current_card_index] || 0
     
     {
-      current: current_index + 1,
+      current: [current_index + 1, card_ids.length].min,
       total: card_ids.length,
       percentage: card_ids.length > 0 ? ((current_index.to_f / card_ids.length) * 100).round : 0
     }
