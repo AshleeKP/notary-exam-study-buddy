@@ -30,8 +30,23 @@ namespace :notary do
     scraper = NotaryPdfScraper.new
     flashcards = scraper.extract_flashcards(content)
     
-    puts "Generated #{flashcards.count} flashcards"
+    # Create or update 2024 pamphlet version
+    pamphlet_version = PamphletVersion.find_or_create_by(year: 2024)
     
-    # TODO: Import to database
+    # Clear existing cards for this version
+    pamphlet_version.cards.destroy_all
+    
+    # Import flashcards
+    flashcards.each do |card_data|
+      Card.create!(
+        pamphlet_version: pamphlet_version,
+        question: card_data[:question],
+        answer: card_data[:answer],
+        topic: card_data[:topic]
+      )
+    end
+    
+    puts "✅ Generated #{flashcards.count} flashcards"
+    puts "✅ Created in PamphletVersion(year=2024)"
   end
 end
