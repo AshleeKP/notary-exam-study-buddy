@@ -1,6 +1,11 @@
 <div class="container mx-auto px-4 py-8">
   <h1 class="text-4xl font-bold mb-8">NY Notary Exam Study Buddy</h1>
   
+  <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+    <p class="text-blue-900 mb-3">📖 <strong>Review Official Materials:</strong></p>
+    <a href="https://dos.ny.gov/system/files/documents/2024/05/notary.pdf" target="_blank" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View NY Notary PDF</a>
+  </div>
+  
   <div class="mb-8">
     <h2 class="text-2xl font-semibold mb-4">Start Studying</h2>
     <% @pamphlet_versions.each do |version| %>
@@ -8,7 +13,7 @@
         <h3 class="text-xl font-semibold mb-2"><%= version.year %> Edition</h3>
         <p class="text-gray-600 mb-4"><%= version.description %></p>
         <p class="text-sm text-gray-500 mb-4"><%= pluralize(version.cards.count, 'card') %> available</p>
-        <%= button_to "Start Study Session", study_sessions_path(pamphlet_version_id: version.id), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+        <%= button_to "Start Study Session", study_sessions_path(pamphlet_version_id: version.id), class: "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" %>
       </div>
     <% end %>
   </div>
